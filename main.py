@@ -16,6 +16,7 @@ for i in data:
         i["acc"]) \
         .and_("rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_name").exact_match(
         "UniProt") \
+        .and_("rcsb_entry_info.polymer_entity_count_protein").equals(1) \
         .exec("entry")
 
     dict[i["acc"]] = []
@@ -27,6 +28,8 @@ for i in data:
         wget.download(url_download, '/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/' + assemblyid + '.pdb')
 
         dict[i["acc"]].append(assemblyid)
+        # if you only want one, select the first one
+        break
 
 
 # This saves your dict
