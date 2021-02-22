@@ -3,14 +3,21 @@ import wget
 from rcsbsearch import Attr
 import pickle
 
+
+def download(path):
+    url_download = "https://files.rcsb.org/download/" + assemblyid + ".pdb"
+    wget.download(url_download, path + assemblyid + '.pdb')
+
+
 with open('mobidb_result.json') as data_file:
     data = json.load(data_file)
 
 dict = {}
 
-for i in data:
-    print(i["acc"])
+total = 0
+found = 0
 
+for i in data:
     results = Attr(
         "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession").exact_match(
         i["acc"]) \
@@ -21,16 +28,37 @@ for i in data:
 
     dict[i["acc"]] = []
 
-    for assemblyid in results:
-        print(assemblyid)
+    total += 1
 
-        url_download = "https://files.rcsb.org/download/" + assemblyid + ".pdb"
-        wget.download(url_download, '/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/' + assemblyid + '.pdb')
+    is_found = False
+
+    for assemblyid in results:
+        found += 1
+        is_found = True
+        download('/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/')
 
         dict[i["acc"]].append(assemblyid)
-        # if you only want one, select the first one
+
         break
 
+    if not is_found:
+        results = Attr(
+            "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession").exact_match(
+            i["acc"]) \
+            .and_("rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_name").exact_match(
+            "UniProt") \
+            .exec("entry")
+
+        for assemblyid in results:
+            found += 1
+
+            download('/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/')
+
+            dict[i["acc"]].append(assemblyid)
+
+            break
+
+print(found / total)
 
 # This saves your dict
 with open('id_to_file.p', 'bw') as f:
