@@ -1,0 +1,54 @@
+UNIPROT ID,Protein Name,Docking Rank,Docking Affinity,Gene Rank,Gene P-Value Significance,Fold Change
+P02815,mucin-like 2,2302,36.52,1,1.64E-134,29459.57414
+P01139,nerve growth factor,6955,25.57,30,1.38E-14,2.796866878
+Q8K0E8,fibrinogen beta chain,5472,30.59,41,5.99E-08,0.03533973
+O08677,kininogen 1,2800,35.55,44,1.87E-07,0.009690226
+O70273,ets homologous factor,1252,39.14,48,3.99E-06,3.868251651
+P28665,murinoglobulin 1,4084,33.25,52,1.37E-05,0.034816378
+Q3UNW5,transcription factor CP2-like 1,2235,36.64,58,0.45103343,1.071112746
+Q3UNW5,transcription factor CP2-like 1,2235,36.64,58,4.81E-05,1.578423948
+Q3UNW5,transcription factor CP2-like 1,4952,31.65,58,0.45103343,1.071112746
+Q3UNW5,transcription factor CP2-like 1,4952,31.65,58,4.81E-05,1.578423948
+Q8C7G5,apolipoprotein A-V,1683,37.9,60,5.81E-05,0
+P41593,parathyroid hormone,3464,34.33,74,0.000962839,0.028119622
+P41593,parathyroid hormone,3464,34.33,74,0.953847149,1.010127278
+P41593,parathyroid hormone,6323,28.46,74,0.000962839,0.028119622
+P41593,parathyroid hormone,6323,28.46,74,0.953847149,1.010127278
+Q9Z0L6,parathyroid hormone,7266,22.22,74,0.000962839,0.028119622
+P31532,serum amyloid A 4,3622,34.04,75,0.001122679,0.082814748
+Q9QYC3,"basic helix-loop-helix family, member a15",4105,33.21,78,0.001459126,4.603953221
+Q8C9B9,"deiodinase, iodothyronine, type I",1318,38.91,123,0.631546613,1.038859057
+Q8C9B9,"deiodinase, iodothyronine, type I",1318,38.91,123,0.010292196,0
+Q8C9B9,"deiodinase, iodothyronine, type I",3903,33.57,123,0.631546613,1.038859057
+Q8C9B9,"deiodinase, iodothyronine, type I",3903,33.57,123,0.010292196,0
+Q8C9B9,"deiodinase, iodothyronine, type I",7059,24.89,123,0.631546613,1.038859057
+Q8C9B9,"deiodinase, iodothyronine, type I",7059,24.89,123,0.010292196,0
+Q8C9B9,"deiodinase, iodothyronine, type I",7259,22.35,123,0.631546613,1.038859057
+Q8C9B9,"deiodinase, iodothyronine, type I",7259,22.35,123,0.010292196,0
+Q80ZJ8,calcium release activated channel regulator 2B,123,47,128,0.01150469,0.635230569
+Q80ZJ8,calcium release activated channel regulator 2B,123,47,128,1,1.150763644
+Q80ZJ8,calcium release activated channel regulator 2B,5668,30.2,128,0.01150469,0.635230569
+Q80ZJ8,calcium release activated channel regulator 2B,5668,30.2,128,1,1.150763644
+Q80ZJ8,calcium release activated channel regulator 2B,6885,26.07,128,0.01150469,0.635230569
+Q80ZJ8,calcium release activated channel regulator 2B,6885,26.07,128,1,1.150763644
+Q9Z1T2,thrombospondin 4,1958,37.26,136,0.014317232,1.645091878
+Q9Z1T2,thrombospondin 4,2399,36.3,136,0.014317232,1.645091878
+Q80WE4,kinesin family member 20B,4227,33,150,0.02194705,0.582850971
+O88908,sterol O-acyltransferase 2,4602,32.31,153,0.543981189,0.951411801
+O88908,sterol O-acyltransferase 2,4602,32.31,153,0.022320721,0.502031075
+Q9QZ47,"troponin T3, skeletal, fast",1726,37.75,156,0.023358823,0.13105403
+Q9QZ47,"troponin T3, skeletal, fast",2031,37.11,156,0.023358823,0.13105403
+Q9QZ47,"troponin T3, skeletal, fast",4724,32.08,156,0.023358823,0.13105403
+Q9QZ47,"troponin T3, skeletal, fast",6382,28.28,156,0.023358823,0.13105403
+G3UW82,"myosin, heavy polypeptide 2, skeletal muscle, adult",4568,32.36,157,0.023410185,0.463321497
+Q3UHZ5,leiomodin 2 (cardiac),626,42.08,175,0.027649443,0.235781524
+Q3UHZ5,leiomodin 2 (cardiac),1619,38.05,175,0.027649443,0.235781524
+Q3UHZ5,leiomodin 2 (cardiac),6374,28.3,175,0.027649443,0.235781524
+Q9Z1N2,"origin recognition complex, subunit 1",7360,19.29,189,0.031832055,0.448531226
+Q61835,FXYD domain-containing ion transport regulator 3,3474,34.31,193,0.034266541,2.763553559
+Q9JLR5,transcription factor 23,2844,35.46,199,0.038949738,0.624878323
+Q80Z71,tenascin N,1169,39.42,209,0.042454165,2.416733887
+Q80Z71,tenascin N,5433,30.66,209,0.042454165,2.416733887
+O09165,calsequestrin 1,4263,32.94,219,0.045890427,0.638600454
+Q9JM90,signal transducing adaptor family member 1,2660,35.8,221,0.046570704,16.0106916
+P05977,"myosin, light polypeptide 1",4370,32.73,228,0.04856167,0.307670268

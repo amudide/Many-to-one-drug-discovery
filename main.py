@@ -1,7 +1,7 @@
 import json
 import wget
 from rcsbsearch import Attr
-import pickle
+import csv
 
 
 def download(path):
@@ -12,12 +12,14 @@ def download(path):
 with open('mobidb_result.json') as data_file:
     data = json.load(data_file)
 
-dict = {}
+with open('jobs-sruthi.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["", "protein_file", "start", "end", "acc", "name"])
 
-total = 0
-found = 0
+row_num = 1
 
 for i in data:
+
     results = Attr(
         "rcsb_polymer_entity_container_identifiers.reference_sequence_identifiers.database_accession").exact_match(
         i["acc"]) \
@@ -26,19 +28,14 @@ for i in data:
         .and_("rcsb_entry_info.polymer_entity_count_protein").equals(1) \
         .exec("entry")
 
-    dict[i["acc"]] = []
-
-    total += 1
-
     is_found = False
 
+    final_assembly_id = None
+
     for assemblyid in results:
-        found += 1
         is_found = True
         download('/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/')
-
-        dict[i["acc"]].append(assemblyid)
-
+        final_assembly_id = assemblyid
         break
 
     if not is_found:
@@ -50,16 +47,19 @@ for i in data:
             .exec("entry")
 
         for assemblyid in results:
-            found += 1
-
+            is_found = True
             download('/Users/sruthikurada/Documents/MIT PRIMES/Ergothionine/')
-
-            dict[i["acc"]].append(assemblyid)
-
+            final_assembly_id = assemblyid
             break
 
-print(found / total)
+        protein_file = final_assembly_id + '.pdb'
+        start = 1
+        end = i["length"]
+        acc = i["acc"]
+        name = i["name"]
 
-# This saves your dict
-with open('id_to_file.p', 'bw') as f:
-    pickle.dump(dict, f)
+        with open('jobs-sruthi.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([row_num, protein_file, start, end, acc, name])
+
+        row_num += 1
